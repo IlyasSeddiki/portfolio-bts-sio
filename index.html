@@ -10,20 +10,20 @@
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             color: #333;
             background-color: #f8f8f8;
         }
-        
+
         .hero-section {
             height: 100vh;
             background: linear-gradient(135deg, #3a7bd5 0%, #1e3c72 100%);
             position: relative;
             overflow: hidden;
         }
-        
+
         .hero-section::before {
             content: '';
             position: absolute;
@@ -36,23 +36,23 @@
             background-size: cover;
             z-index: 1;
         }
-        
+
         .hero-content {
             position: relative;
             z-index: 2;
         }
-        
+
         .section {
             padding: 5rem 0;
         }
-        
+
         .section-title {
             position: relative;
             margin-bottom: 3rem;
             padding-bottom: 1rem;
             text-align: center;
         }
-        
+
         .section-title:after {
             content: '';
             position: absolute;
@@ -63,7 +63,7 @@
             height: 3px;
             background: linear-gradient(90deg, #3a7bd5, #1e3c72);
         }
-        
+
         .skill-bar {
             height: 10px;
             background-color: #e9ecef;
@@ -71,7 +71,7 @@
             margin-bottom: 1rem;
             overflow: hidden;
         }
-        
+
         .skill-progress {
             height: 100%;
             background: linear-gradient(90deg, #3a7bd5, #1e3c72);
@@ -79,7 +79,7 @@
             transition: width 1.5s ease-in-out;
             width: 0;
         }
-        
+
         .project-card {
             border-radius: 8px;
             overflow: hidden;
@@ -87,12 +87,12 @@
             transition: all 0.3s ease;
             height: 100%;
         }
-        
+
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
-        
+
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -111,17 +111,17 @@
             transition: all 0.3s;
             z-index: 100;
         }
-        
+
         .back-to-top.show {
             opacity: 1;
             visibility: visible;
         }
-        
+
         .nav-item {
             position: relative;
             transition: all 0.3s;
         }
-        
+
         .nav-item:after {
             content: '';
             position: absolute;
@@ -133,22 +133,22 @@
             background: #3a7bd5;
             transition: all 0.3s;
         }
-        
+
         .nav-item:hover:after {
             width: 100%;
         }
-        
+
         .fade-in-section {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 1s ease-out, transform 1s ease-out;
         }
-        
+
         .fade-in-section.is-visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         /* Personnalisation des barres de compétences */
         .html-css { width: 85%; }
         .javascript { width: 70%; }
@@ -157,63 +157,73 @@
         .cybersec { width: 80%; }
         .linux { width: 85%; }
         .windows { width: 75%; }
-        
+
         /* Style pour la section CV */
         .cv-container {
             background-color: white;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
-        
+
         /* Personnalisation du formulaire */
         .form-input {
             border: 1px solid #e2e8f0;
             transition: all 0.3s;
         }
-        
+
         .form-input:focus {
             border-color: #3a7bd5;
             box-shadow: 0 0 0 3px rgba(58, 123, 213, 0.2);
         }
-        
+
         .btn-primary {
             background: linear-gradient(90deg, #3a7bd5, #1e3c72);
             transition: all 0.3s;
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(30, 60, 114, 0.4);
         }
-        
+
         /* Style pour le menu mobile */
         .mobile-menu {
             transition: transform 0.3s ease;
             transform: translateX(100%);
         }
-        
+
         .mobile-menu.active {
             transform: translateX(0);
         }
-        
+
         /* Style pour la navbar en position sticky */
         .navbar-sticky {
             backdrop-filter: blur(10px);
             background-color: rgba(255, 255, 255, 0.9);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
-        
+         /* Style pour le bouton de langue dans la navbar sticky */
+        .navbar-sticky #lang-switcher {
+            color: #4A5568; /* text-gray-700 */
+            border-color: #4A5568; /* border-gray-700 */
+        }
+        .navbar-sticky #lang-switcher:hover {
+            color: #3a7bd5; /* Votre couleur d'accentuation */
+            border-color: #3a7bd5;
+        }
+
+
         /* Personnalisation des onglets de la section projet */
         .tab-button {
             transition: all 0.3s;
         }
-        
+
         .tab-button.active {
             background: linear-gradient(90deg, #3a7bd5, #1e3c72);
             color: white;
             box-shadow: 0 4px 6px -1px rgba(58, 123, 213, 0.4);
         }
-        
+
         /* Animation pour les cartes de projets */
         @keyframes fadeInUp {
             from {
@@ -225,25 +235,25 @@
                 transform: translateY(0);
             }
         }
-        
+
         .project-tab-content {
             display: none;
         }
-        
+
         .project-tab-content.active {
             display: grid;
             animation: fadeInUp 0.5s ease-out forwards;
         }
-        
+
         /* Style spécial pour les liens sociaux */
         .social-link {
             transition: all 0.3s;
         }
-        
+
         .social-link:hover {
             transform: translateY(-3px);
         }
-        
+
         /* Style pour l'affichage PDF */
         .pdf-container {
             border: 1px solid #e2e8f0;
@@ -257,21 +267,35 @@
     <header class="fixed w-full z-50 transition-all duration-500">
         <nav class="px-4 py-3 flex justify-between items-center bg-transparent lg:px-8 transition-all duration-300">
             <div class="text-2xl font-bold text-white transition-all duration-300">
-                <h1>Portfolio <span class="text-yellow-400">BTS SIO</span></h1>
+                 <h1>
+                    <span data-fr="Portfolio" data-en="Portfolio">Portfolio</span>
+                    <span class="text-yellow-400" data-fr="BTS SIO" data-en="IT Degree">BTS SIO</span>
+                </h1>
+            </div>
+
+            <!-- Language Switcher Desktop -->
+            <div class="hidden lg:block lg:order-3 ml-4">
+                <button id="lang-switcher" class="text-white hover:text-yellow-400 font-medium px-3 py-1 border border-white rounded text-sm transition-all duration-300">
+                    EN
+                </button>
             </div>
             
             <!-- Desktop Menu -->
-            <div class="hidden lg:flex space-x-8">
-                <a href="#accueil" class="nav-item text-white hover:text-yellow-400 font-medium">Accueil</a>
-                <a href="#a-propos" class="nav-item text-white hover:text-yellow-400 font-medium">À propos</a>
-                <a href="#cv" class="nav-item text-white hover:text-yellow-400 font-medium">CV</a>
-                <a href="#projets" class="nav-item text-white hover:text-yellow-400 font-medium">Projets</a>
-                <a href="#stages" class="nav-item text-white hover:text-yellow-400 font-medium">Stages</a>
-                <a href="#contact" class="nav-item text-white hover:text-yellow-400 font-medium">Contact</a>
+            <div class="hidden lg:flex space-x-8 lg:order-2">
+                <a href="#accueil" class="nav-item text-white hover:text-yellow-400 font-medium" data-fr="Accueil" data-en="Home">Accueil</a>
+                <a href="#a-propos" class="nav-item text-white hover:text-yellow-400 font-medium" data-fr="À propos" data-en="About">À propos</a>
+                <a href="#cv" class="nav-item text-white hover:text-yellow-400 font-medium" data-fr="CV" data-en="Resume">CV</a>
+                <a href="#projets" class="nav-item text-white hover:text-yellow-400 font-medium" data-fr="Projets" data-en="Projects">Projets</a>
+                <a href="#stages" class="nav-item text-white hover:text-yellow-400 font-medium" data-fr="Stages" data-en="Internships">Stages</a>
+                <a href="#contact" class="nav-item text-white hover:text-yellow-400 font-medium" data-fr="Contact" data-en="Contact">Contact</a>
             </div>
             
             <!-- Mobile Menu Button -->
-            <div class="lg:hidden">
+            <div class="lg:hidden flex items-center">
+                 <!-- Language Switcher Mobile (avant le burger) -->
+                <button id="lang-switcher-mobile-icon" class="text-white focus:outline-none mr-4">
+                    <span class="font-medium text-sm">EN</span>
+                </button>
                 <button id="mobile-menu-button" class="text-white focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -289,13 +313,19 @@
                     </svg>
                 </button>
             </div>
+            <!-- Language Switcher in Mobile Menu -->
+            <div class="mt-4 mb-4">
+                <button id="mobile-lang-switcher" class="w-full text-left text-white hover:text-yellow-400 font-medium py-2 border-b border-gray-700">
+                    Passer en Anglais
+                </button>
+            </div>
             <div class="flex flex-col space-y-4 mt-8">
-                <a href="#accueil" class="text-white hover:text-yellow-400 font-medium py-2">Accueil</a>
-                <a href="#a-propos" class="text-white hover:text-yellow-400 font-medium py-2">À propos</a>
-                <a href="#cv" class="text-white hover:text-yellow-400 font-medium py-2">CV</a>
-                <a href="#projets" class="text-white hover:text-yellow-400 font-medium py-2">Projets</a>
-                <a href="#stages" class="text-white hover:text-yellow-400 font-medium py-2">Stages</a>
-                <a href="#contact" class="text-white hover:text-yellow-400 font-medium py-2">Contact</a>
+                <a href="#accueil" class="text-white hover:text-yellow-400 font-medium py-2" data-fr="Accueil" data-en="Home">Accueil</a>
+                <a href="#a-propos" class="text-white hover:text-yellow-400 font-medium py-2" data-fr="À propos" data-en="About">À propos</a>
+                <a href="#cv" class="text-white hover:text-yellow-400 font-medium py-2" data-fr="CV" data-en="Resume">CV</a>
+                <a href="#projets" class="text-white hover:text-yellow-400 font-medium py-2" data-fr="Projets" data-en="Projects">Projets</a>
+                <a href="#stages" class="text-white hover:text-yellow-400 font-medium py-2" data-fr="Stages" data-en="Internships">Stages</a>
+                <a href="#contact" class="text-white hover:text-yellow-400 font-medium py-2" data-fr="Contact" data-en="Contact">Contact</a>
             </div>
         </div>
     </header>
@@ -303,22 +333,20 @@
     <!-- Hero Section -->
     <section id="accueil" class="hero-section flex items-center justify-center text-white">
         <div class="hero-content container mx-auto px-4 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in" data-fr="Ilyas Seddiki" data-en="Ilyas Seddiki">
                 Ilyas Seddiki
-                <span class="block"></span>
-                <span class="block mt-2"></span>
             </h1>
-            <h2 class="text-xl md:text-3xl font-light mb-8 animate-fade-in">
+            <h2 class="text-xl md:text-3xl font-light mb-8 animate-fade-in" data-fr="Étudiant en BTS SIO – Passionné de réseaux, cybersécurité et systèmes" data-en="IT Student – Passionate about networking, cybersecurity, and systems">
                 Étudiant en BTS SIO – Passionné de réseaux, cybersécurité et systèmes
             </h2>
             <div class="flex justify-center space-x-4 mb-8 animate-fade-in">
-                <a href="https://www.linkedin.com/in/seddiki-ilyas/" target="_blank" class="social-link bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center" title="LinkedIn">
+                <a href="https://www.linkedin.com/in/seddiki-ilyas/" target="_blank" class="social-link bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center" title="LinkedIn" data-fr-title="LinkedIn" data-en-title="LinkedIn">
                     <i class="fab fa-linkedin-in"></i>
                 </a>
-                <a href="https://github.com/IlyasSeddiki" target="_blank" class="social-link bg-gray-800 hover:bg-gray-900 text-white rounded-full w-12 h-12 flex items-center justify-center" title="GitHub"> 
+                <a href="https://github.com/IlyasSeddiki" target="_blank" class="social-link bg-gray-800 hover:bg-gray-900 text-white rounded-full w-12 h-12 flex items-center justify-center" title="GitHub" data-fr-title="GitHub" data-en-title="GitHub"> 
                     <i class="fab fa-github" ></i>
                 </a>
-                <a href="#contact" class="social-link bg-green-600 hover:bg-green-700 text-white rounded-full w-12 h-12 flex items-center justify-center" title="Contact">
+                <a href="#contact" class="social-link bg-green-600 hover:bg-green-700 text-white rounded-full w-12 h-12 flex items-center justify-center" title="Contact" data-fr-title="Contact" data-en-title="Contact">
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
@@ -333,31 +361,29 @@
     <!-- À propos Section -->
     <section id="a-propos" class="section bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="section-title text-3xl font-bold">À propos de moi</h2>
+            <h2 class="section-title text-3xl font-bold" data-fr="À propos de moi" data-en="About Me">À propos de moi</h2>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                 <div class="fade-in-section">
-                    <h3 class="text-2xl font-semibold mb-4">Qui suis-je ?</h3>
-                    <p class="text-gray-700 mb-6">
-                        <!-- Ton texte de présentation ici -->
+                    <h3 class="text-2xl font-semibold mb-4" data-fr="Qui suis-je ?" data-en="Who am I?">Qui suis-je ?</h3>
+                    <p class="text-gray-700 mb-6" data-fr="Je m'appelle Ilyas, étudiant en BTS SIO option SISR (Solutions d’Infrastructure, Systèmes et Réseaux) au lycée René Descartes à Champs-sur-Marne. Je suis passionné par l’informatique, les réseaux et la cybersécurité." data-en="My name is Ilyas, a student in BTS SIO option SISR (Infrastructure, Systems and Networks Solutions) at Lycée René Descartes in Champs-sur-Marne. I am passionate about IT, networks, and cybersecurity.">
                         Je m'appelle Ilyas, étudiant en BTS SIO option SISR (Solutions d’Infrastructure, Systèmes et Réseaux) au lycée René Descartes à Champs-sur-Marne.
                         Je suis passionné par l’informatique, les réseaux et la cybersécurité.
                     </p>
-                    <p class="text-gray-700 mb-6">
-                        <!-- Suite de présentation ici -->
+                    <p class="text-gray-700 mb-6" data-fr="J’ai conçu ce portfolio pour présenter mes compétences, mes projets réalisés et mes expériences en entreprise. Bienvenue sur mon espace professionnel !" data-en="I designed this portfolio to present my skills, completed projects, and professional experiences. Welcome to my professional space!">
                         J’ai conçu ce portfolio pour présenter mes compétences, mes projets réalisés et mes expériences en entreprise.
                         Bienvenue sur mon espace professionnel !
                     </p>
                     <div class="flex flex-wrap gap-2 mt-6">
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Réseaux</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Cybersécurité</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Administration système</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Windows Server</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Linux</span>
-                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Virtualisation</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm" data-fr="Réseaux" data-en="Networking">Réseaux</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm" data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm" data-fr="Administration système" data-en="System Administration">Administration système</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm" data-fr="Windows Server" data-en="Windows Server">Windows Server</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm" data-fr="Linux" data-en="Linux">Linux</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm" data-fr="Virtualisation" data-en="Virtualization">Virtualisation</span>
                     </div>
                 </div>
                 <div class="fade-in-section">
-                    <h3 class="text-2xl font-semibold mb-4">Mes compétences</h3>
+                    <h3 class="text-2xl font-semibold mb-4" data-fr="Mes compétences" data-en="My Skills">Mes compétences</h3>
                     <div class="mb-4">
                         <div class="flex justify-between mb-1">
                             <span class="text-gray-700">HTML/CSS</span>
@@ -387,7 +413,7 @@
                     </div>
                     <div class="mb-4">
                         <div class="flex justify-between mb-1">
-                            <span class="text-gray-700">Réseaux</span>
+                            <span class="text-gray-700" data-fr="Réseaux" data-en="Networking">Réseaux</span>
                             <span class="text-gray-700">90%</span>
                         </div>
                         <div class="skill-bar">
@@ -396,7 +422,7 @@
                     </div>
                     <div class="mb-4">
                         <div class="flex justify-between mb-1">
-                            <span class="text-gray-700">Cybersécurité</span>
+                            <span class="text-gray-700" data-fr="Cybersécurité" data-en="Cybersecurity">Cybersécurité</span>
                             <span class="text-gray-700">80%</span>
                         </div>
                         <div class="skill-bar">
@@ -414,7 +440,7 @@
                     </div>
                     <div class="mb-4">
                         <div class="flex justify-between mb-1">
-                            <span class="text-gray-700">Windows Server</span>
+                            <span class="text-gray-700" data-fr="Windows Server" data-en="Windows Server">Windows Server</span>
                             <span class="text-gray-700">75%</span>
                         </div>
                         <div class="skill-bar">
@@ -427,126 +453,107 @@
     </section>
 
     <!-- CV Section -->
-<section id="cv" class="section bg-gray-100">
-  <div class="container mx-auto px-4">
-    <h2 class="section-title text-3xl font-bold mb-8">Mon CV</h2>
-    <div class="fade-in-section">
-      <div class="cv-container p-8">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          
-          <!-- 🎓 Formation -->
-          <div>
-            <h3 class="text-2xl font-semibold mb-4">Formation</h3>
-
-            <div class="mb-6">
-              <div class="flex justify-between">
-                <h4 class="font-medium">BTS SIO – option SISR</h4>
-                <span class="text-blue-600">2024 - 2026</span>
+    <section id="cv" class="section bg-gray-100">
+      <div class="container mx-auto px-4">
+        <h2 class="section-title text-3xl font-bold mb-8" data-fr="Mon CV" data-en="My Resume">Mon CV</h2>
+        <div class="fade-in-section">
+          <div class="cv-container p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+              <div>
+                <h3 class="text-2xl font-semibold mb-4" data-fr="Formation" data-en="Education">Formation</h3>
+                <div class="mb-6">
+                  <div class="flex justify-between">
+                    <h4 class="font-medium" data-fr="BTS SIO – option SISR" data-en="IT Degree – SISR option">BTS SIO – option SISR</h4>
+                    <span class="text-blue-600">2024 - 2026</span>
+                  </div>
+                  <p class="text-gray-600">Lycée René Descartes</p>
+                  <p class="text-gray-700 mt-2" data-fr="Spécialité Solutions d’Infrastructure, Systèmes et Réseaux" data-en="Specializing in Infrastructure, Systems, and Network Solutions">
+                    Spécialité Solutions d’Infrastructure, Systèmes et Réseaux
+                  </p>
+                </div>
+                <div class="mb-6">
+                  <div class="flex justify-between">
+                    <h4 class="font-medium" data-fr="Licence Mathématique et Informatique" data-en="Bachelor's Degree in Mathematics and Computer Science">Licence Mathématique et Informatique</h4>
+                    <span class="text-blue-600">2023 - 2024</span>
+                  </div>
+                  <p class="text-gray-600">Université Gustave Eiffel</p>
+                  <p class="text-gray-700 mt-2" data-fr="Licence 1 - Math-Info" data-en="Year 1 - Math-CS">
+                    Licence 1 - Math-Info
+                  </p>
+                </div>
+                <div class="mb-6">
+                  <div class="flex justify-between">
+                    <h4 class="font-medium" data-fr="Baccalauréat général" data-en="General Baccalaureate">Baccalauréat général</h4>
+                    <span class="text-blue-600">2017 - 2020</span>
+                  </div>
+                  <p class="text-gray-600">Lycée André Bouloche</p>
+                  <p class="text-gray-700 mt-2" data-fr="Spécialités : Mathématiques et SES" data-en="Specialties: Mathematics and Economics & Social Sciences">
+                    Spécialités : Mathématiques et SES
+                  </p>
+                </div>
               </div>
-              <p class="text-gray-600">Lycée René Descartes</p>
-              <p class="text-gray-700 mt-2">
-                Spécialité Solutions d’Infrastructure, Systèmes et Réseaux
-              </p>
+              <div>
+                <h3 class="text-2xl font-semibold mb-4" data-fr="Expérience professionnelle" data-en="Work Experience">Expérience professionnelle</h3>
+                <div class="mb-6">
+                  <div class="flex justify-between">
+                    <h4 class="font-medium" data-fr="Stage de première année – TD Synnex" data-en="First-year Internship – TD Synnex">Stage de première année – TD Synnex</h4>
+                    <span class="text-blue-600" data-fr="02/06/2024 au 04/07/2024" data-en="06/02/2024 to 07/04/2024">02/06/2024 au 04/07/2024</span>
+                  </div>
+                  <p class="text-gray-700 mt-2" data-fr="ajt description stage" data-en="[Add internship description here]">
+                    ajt description stage
+                  </p>
+                </div>
+                <div class="mb-6">
+                  <div class="flex justify-between">
+                    <h4 class="font-medium" data-fr="Job étudiant - TD Synnex" data-en="Student Job - TD Synnex">Job étudiant - TD Synnex</h4>
+                    <span class="text-blue-600" data-fr="01/06/2024 au 30/07/2024" data-en="06/01/2024 to 07/30/2024">01/06/2024 au 30/07/2024</span>
+                  </div>
+                  <p class="text-gray-600">Bussy-Saint-Georges</p>
+                  <p class="text-gray-700 mt-2" data-fr="Assemblage et intégration de composants informatiques (carte mère, processeur, RAM, disque dur, etc.) dans des unités centrales." data-en="Assembly and integration of computer components (motherboard, processor, RAM, hard drive, etc.) into desktop units.">
+                      Assemblage et intégration de composants informatiques (carte mère, processeur, RAM, disque dur, etc.) dans des unités centrales.
+                  </p>
+                </div>
+                <div class="mb-6">
+                  <div class="flex justify-between">
+                    <h4 class="font-medium" data-fr="Job étudiant – Xerox" data-en="Student Job – Xerox">Job étudiant – Xerox</h4>
+                    <span class="text-blue-600" data-fr="01/06/2023 au 30/07/2023" data-en="06/01/2023 to 07/30/2023">01/06/2023 au 30/07/2023</span>
+                  </div>
+                  <p class="text-gray-600">Villepinte</p>
+                  <p class="text-gray-700 mt-2" data-fr="Numérisation de documents à partir de la suite Office. Préparation et traitement des courriers." data-en="Document scanning using the Office suite. Mail preparation and processing.">
+                      Numérisation de documents à partir de la suite Office.
+                      Préparation et traitement des courriers.
+                  </p>
+                </div>
+              </div>
             </div>
-
-              <div class="mb-6">
-              <div class="flex justify-between">
-                <h4 class="font-medium">Licence Mathématique et Informatique</h4>
-                <span class="text-blue-600">2023 - 2024</span>
-              </div>
-              <p class="text-gray-600">Université Gustave Eiffel</p>
-              <p class="text-gray-700 mt-2">
-                Licence 1 - Math-Info
-              </p>
-            </div>
-
-            <div class="mb-6">
-              <div class="flex justify-between">
-                <h4 class="font-medium">Baccalauréat général</h4>
-                <span class="text-blue-600">2017 - 2020</span>
-              </div>
-              <p class="text-gray-600">Lycée André Bouloche</p>
-              <p class="text-gray-700 mt-2">
-                Spécialités : Mathématiques et SES
-              </p>
-            </div>
-          </div>
-
-          <!-- 💼 Expérience professionnelle -->
-          <div>
-            <h3 class="text-2xl font-semibold mb-4">Expérience professionnelle</h3>
-
-            <!-- Stage -->
-            <div class="mb-6">
-              <div class="flex justify-between">
-                <h4 class="font-medium">Stage de première année – TD Synnex</h4>
-                <span class="text-blue-600">02/06/2024 au 04/07/2024</span>
-              </div>
-              <p class="text-gray-700 mt-2">
-                ajt description stage
-              </p>
-            </div>
-
-            <!-- Expérience pro 1 -->
-            <div class="mb-6">
-              <div class="flex justify-between">
-                <h4 class="font-medium">Job étudiant - TD Synnex</h4>
-                <span class="text-blue-600">01/06/2024 au 30/07/2024</span>
-              </div>
-              <p class="text-gray-600">Bussy-Saint-Georges</p>
-              <p class="text-gray-700 mt-2">
-                <!-- Description de la mission -->
-                  Assemblage et intégration de composants informatiques (carte mère, processeur, RAM, disque dur, etc.) dans des unités centrales.
-              </p>
-            </div>
-
-            <!-- Expérience pro 2 -->
-            <div class="mb-6">
-              <div class="flex justify-between">
-                <h4 class="font-medium">Job étudiant – Xerox</h4>
-                <span class="text-blue-600">01/06/2023 au 30/07/2023</span>
-              </div>
-              <p class="text-gray-600">Villepinte</p>
-              <p class="text-gray-700 mt-2">
-                <!-- Description de la mission -->
-                  Numérisation de documents à partir de la suite Office.
-                  Préparation et traitement des courriers.
-              </p>
+            <div class="flex justify-center mt-10">
+              <a href="cv.pdf" target="_blank"
+                class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:-translate-y-1"
+                data-fr="Voir mon CV complet" data-en="View Full Resume">
+                Voir mon CV complet
+              </a>
             </div>
           </div>
         </div>
-
-        <!-- 🔵 Bouton CV complet -->
-        <div class="flex justify-center mt-10">
-          <a href="cv.pdf" target="_blank"
-            class="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:-translate-y-1">
-            Voir mon CV complet
-          </a>
-        </div>
-        
       </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- Projets Section -->
     <section id="projets" class="section bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="section-title text-3xl font-bold">Mes projets</h2>
-            
+            <h2 class="section-title text-3xl font-bold" data-fr="Mes projets" data-en="My Projects">Mes projets</h2>
             <div class="flex justify-center mb-8">
                 <div class="inline-flex rounded-md shadow-sm" role="group">
-                    <button type="button" class="tab-button active px-5 py-3 text-sm font-medium rounded-l-lg border border-gray-200" data-tab="all">
+                    <button type="button" class="tab-button active px-5 py-3 text-sm font-medium rounded-l-lg border border-gray-200" data-tab="all" data-fr="Tous" data-en="All">
                         Tous
                     </button>
-                    <button type="button" class="tab-button px-5 py-3 text-sm font-medium border-t border-b border-gray-200" data-tab="tp">
+                    <button type="button" class="tab-button px-5 py-3 text-sm font-medium border-t border-b border-gray-200" data-tab="tp" data-fr="TP" data-en="Labs">
                         TP
                     </button>
-                    <button type="button" class="tab-button px-5 py-3 text-sm font-medium border-t border-b border-gray-200" data-tab="projets-annee">
+                    <button type="button" class="tab-button px-5 py-3 text-sm font-medium border-t border-b border-gray-200" data-tab="projets-annee" data-fr="Projets annuels" data-en="Yearly Projects">
                         Projets annuels
                     </button>
-                    <button type="button" class="tab-button px-5 py-3 text-sm font-medium rounded-r-lg border border-gray-200" data-tab="perso">
+                    <button type="button" class="tab-button px-5 py-3 text-sm font-medium rounded-r-lg border border-gray-200" data-tab="perso" data-fr="Projets personnels" data-en="Personal Projects">
                         Projets personnels
                     </button>
                 </div>
@@ -559,120 +566,85 @@
                     <div class="project-card bg-white">
                         <div class="h-48 overflow-hidden bg-gray-200">
                             <img src="Docker-Logo.png" alt="Illustration Docker" class="w-full h-auto mb-4 rounded-lg shadow-md" />
-                            <!-- Image du projet ici -->
-                            <div class="h-full w-full flex items-center justify-center text-gray-400">
-                                <i class="fas fa-image text-4xl"></i>
-                            </div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2">Déploiement de conteneurs Docker</h3>
-                            <p class="text-gray-700 mb-4">Mise en place et gestion de conteneurs avec Docker. Création d'images, gestion des volumes et des réseaux, déploiement d'applications isolées.</p>
-                            
+                            <h3 class="font-bold text-xl mb-2" data-fr="Déploiement de conteneurs Docker" data-en="Docker Container Deployment">Déploiement de conteneurs Docker</h3>
+                            <p class="text-gray-700 mb-4" data-fr="Mise en place et gestion de conteneurs avec Docker. Création d'images, gestion des volumes et des réseaux, déploiement d'applications isolées." data-en="Setup and management of containers with Docker. Image creation, volume and network management, deployment of isolated applications.">Mise en place et gestion de conteneurs avec Docker. Création d'images, gestion des volumes et des réseaux, déploiement d'applications isolées.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-blue-600 font-medium">TP</span>
+                                <span class="text-sm text-blue-600 font-medium" data-fr="TP" data-en="Lab">TP</span>
                                 <a href="docker.pdf" target="_blank"class="text-blue-600 hover:text-blue-800">
                                     <i class="fas fa-arrow-right"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    
                     <!-- Project 2 -->
                     <div class="project-card bg-white">
                         <div class="h-48 overflow-hidden bg-gray-200">
-                            <!-- Image du projet ici -->
-                            <div class="h-full w-full flex items-center justify-center text-gray-400">
-                                <i class="fas fa-image text-4xl"></i>
-                            </div>
+                            <div class="h-full w-full flex items-center justify-center text-gray-400"><i class="fas fa-network-wired text-4xl"></i></div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2">Sécurisation d'un réseau local</h3>
-                            <p class="text-gray-700 mb-4">Mise en place d'un pare-feu et configuration de VLANs pour sécuriser un réseau d'entreprise.</p>
+                            <h3 class="font-bold text-xl mb-2" data-fr="Sécurisation d'un réseau local" data-en="Local Network Security">Sécurisation d'un réseau local</h3>
+                            <p class="text-gray-700 mb-4" data-fr="Mise en place d'un pare-feu et configuration de VLANs pour sécuriser un réseau d'entreprise." data-en="Implementation of a firewall and VLAN configuration to secure a corporate network.">Mise en place d'un pare-feu et configuration de VLANs pour sécuriser un réseau d'entreprise.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-blue-600 font-medium">Projet annuel</span>
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <span class="text-sm text-blue-600 font-medium" data-fr="Projet annuel" data-en="Yearly Project">Projet annuel</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    
                     <!-- Project 3 -->
                     <div class="project-card bg-white">
                         <div class="h-48 overflow-hidden bg-gray-200">
-                            <!-- Image du projet ici -->
-                            <div class="h-full w-full flex items-center justify-center text-gray-400">
-                                <i class="fas fa-image text-4xl"></i>
-                            </div>
+                             <div class="h-full w-full flex items-center justify-center text-gray-400"><i class="fab fa-python text-4xl"></i></div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2">Automatisation avec Python</h3>
-                            <p class="text-gray-700 mb-4">Développement de scripts pour automatiser des tâches d'administration système.</p>
+                            <h3 class="font-bold text-xl mb-2" data-fr="Automatisation avec Python" data-en="Automation with Python">Automatisation avec Python</h3>
+                            <p class="text-gray-700 mb-4" data-fr="Développement de scripts pour automatiser des tâches d'administration système." data-en="Development of scripts to automate system administration tasks.">Développement de scripts pour automatiser des tâches d'administration système.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-blue-600 font-medium">Projet personnel</span>
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <span class="text-sm text-blue-600 font-medium" data-fr="Projet personnel" data-en="Personal Project">Projet personnel</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    
                     <!-- Project 4 -->
                     <div class="project-card bg-white">
                         <div class="h-48 overflow-hidden bg-gray-200">
-                            <!-- Image du projet ici -->
-                            <div class="h-full w-full flex items-center justify-center text-gray-400">
-                                <i class="fas fa-image text-4xl"></i>
-                            </div>
+                            <div class="h-full w-full flex items-center justify-center text-gray-400"><i class="fas fa-server text-4xl"></i></div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2">Virtualisation avec Proxmox</h3>
-                            <p class="text-gray-700 mb-4">Configuration d'un environnement de virtualisation complet avec Proxmox VE.</p>
+                            <h3 class="font-bold text-xl mb-2" data-fr="Virtualisation avec Proxmox" data-en="Virtualization with Proxmox">Virtualisation avec Proxmox</h3>
+                            <p class="text-gray-700 mb-4" data-fr="Configuration d'un environnement de virtualisation complet avec Proxmox VE." data-en="Configuration of a complete virtualization environment with Proxmox VE.">Configuration d'un environnement de virtualisation complet avec Proxmox VE.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-blue-600 font-medium">TP</span>
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <span class="text-sm text-blue-600 font-medium" data-fr="TP" data-en="Lab">TP</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    
                     <!-- Project 5 -->
                     <div class="project-card bg-white">
                         <div class="h-48 overflow-hidden bg-gray-200">
-                            <!-- Image du projet ici -->
-                            <div class="h-full w-full flex items-center justify-center text-gray-400">
-                                <i class="fas fa-image text-4xl"></i>
-                            </div>
+                            <div class="h-full w-full flex items-center justify-center text-gray-400"><i class="fas fa-cloud text-4xl"></i></div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2">Déploiement d'une infrastructure cloud</h3>
-                            <p class="text-gray-700 mb-4">Mise en place d'un cloud privé pour une PME avec des services de stockage et d'applications.</p>
+                            <h3 class="font-bold text-xl mb-2" data-fr="Déploiement d'une infrastructure cloud" data-en="Cloud Infrastructure Deployment">Déploiement d'une infrastructure cloud</h3>
+                            <p class="text-gray-700 mb-4" data-fr="Mise en place d'un cloud privé pour une PME avec des services de stockage et d'applications." data-en="Implementation of a private cloud for an SME with storage and application services.">Mise en place d'un cloud privé pour une PME avec des services de stockage et d'applications.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-blue-600 font-medium">Projet annuel</span>
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <span class="text-sm text-blue-600 font-medium" data-fr="Projet annuel" data-en="Yearly Project">Projet annuel</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    
                     <!-- Project 6 -->
                     <div class="project-card bg-white">
                         <div class="h-48 overflow-hidden bg-gray-200">
-                            <!-- Image du projet ici -->
-                            <div class="h-full w-full flex items-center justify-center text-gray-400">
-                                <i class="fas fa-image text-4xl"></i>
-                            </div>
+                            <div class="h-full w-full flex items-center justify-center text-gray-400"><i class="fas fa-chart-line text-4xl"></i></div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2">Monitoring avec Grafana</h3>
-                            <p class="text-gray-700 mb-4">Création d'un tableau de bord pour surveiller les performances du réseau et des serveurs.</p>
+                            <h3 class="font-bold text-xl mb-2" data-fr="Monitoring avec Grafana" data-en="Monitoring with Grafana">Monitoring avec Grafana</h3>
+                            <p class="text-gray-700 mb-4" data-fr="Création d'un tableau de bord pour surveiller les performances du réseau et des serveurs." data-en="Creation of a dashboard to monitor network and server performance.">Création d'un tableau de bord pour surveiller les performances du réseau et des serveurs.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-blue-600 font-medium">Projet personnel</span>
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <span class="text-sm text-blue-600 font-medium" data-fr="Projet personnel" data-en="Personal Project">Projet personnel</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -682,42 +654,42 @@
             <!-- TP Projects -->
             <div class="project-tab-content" id="tp-content">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- TP Project 1 -->
                     <div class="project-card bg-white">
                         <div class="h-48 overflow-hidden bg-gray-200">
-                            <!-- Image du projet ici -->
-                            <div class="h-full w-full flex items-center justify-center text-gray-400">
-                                <i class="fas fa-image text-4xl"></i>
-                            </div>
+                            <img src="Docker-Logo.png" alt="Illustration Docker" class="w-full h-auto mb-4 rounded-lg shadow-md" />
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2">Mise en place d'un serveur Windows</h3>
-                            <p class="text-gray-700 mb-4">Configuration d'un serveur Windows Server 2019 avec Active Directory, DNS et DHCP.</p>
+                            <h3 class="font-bold text-xl mb-2" data-fr="Déploiement de conteneurs Docker" data-en="Docker Container Deployment">Déploiement de conteneurs Docker</h3>
+                            <p class="text-gray-700 mb-4" data-fr="Mise en place et gestion de conteneurs avec Docker. Création d'images, gestion des volumes et des réseaux, déploiement d'applications isolées." data-en="Setup and management of containers with Docker. Image creation, volume and network management, deployment of isolated applications.">Mise en place et gestion de conteneurs avec Docker. Création d'images, gestion des volumes et des réseaux, déploiement d'applications isolées.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-blue-600 font-medium">TP</span>
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <span class="text-sm text-blue-600 font-medium" data-fr="TP" data-en="Lab">TP</span>
+                                <a href="docker.pdf" target="_blank"class="text-blue-600 hover:text-blue-800"><i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- TP Project 2 -->
                     <div class="project-card bg-white">
                         <div class="h-48 overflow-hidden bg-gray-200">
-                            <!-- Image du projet ici -->
-                            <div class="h-full w-full flex items-center justify-center text-gray-400">
-                                <i class="fas fa-image text-4xl"></i>
-                            </div>
+                            <div class="h-full w-full flex items-center justify-center text-gray-400"><i class="fas fa-server text-4xl"></i></div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2">Virtualisation avec Proxmox</h3>
-                            <p class="text-gray-700 mb-4">Configuration d'un environnement de virtualisation complet avec Proxmox VE.</p>
+                            <h3 class="font-bold text-xl mb-2" data-fr="Virtualisation avec Proxmox" data-en="Virtualization with Proxmox">Virtualisation avec Proxmox</h3>
+                            <p class="text-gray-700 mb-4" data-fr="Configuration d'un environnement de virtualisation complet avec Proxmox VE." data-en="Configuration of a complete virtualization environment with Proxmox VE.">Configuration d'un environnement de virtualisation complet avec Proxmox VE.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-blue-600 font-medium">TP</span>
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <span class="text-sm text-blue-600 font-medium" data-fr="TP" data-en="Lab">TP</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="project-card bg-white">
+                        <div class="h-48 overflow-hidden bg-gray-200">
+                            <div class="h-full w-full flex items-center justify-center text-gray-400"><i class="fab fa-windows text-4xl"></i></div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2" data-fr="Mise en place d'un serveur Windows" data-en="Windows Server Setup">Mise en place d'un serveur Windows</h3>
+                            <p class="text-gray-700 mb-4" data-fr="Configuration d'un serveur Windows Server 2019 avec Active Directory, DNS et DHCP." data-en="Configuration of a Windows Server 2019 with Active Directory, DNS, and DHCP.">Configuration d'un serveur Windows Server 2019 avec Active Directory, DNS et DHCP.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-blue-600 font-medium" data-fr="TP" data-en="Lab">TP</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -727,42 +699,29 @@
             <!-- Projets annuels -->
             <div class="project-tab-content" id="projets-annee-content">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Projet annuel 1 -->
                     <div class="project-card bg-white">
                         <div class="h-48 overflow-hidden bg-gray-200">
-                            <!-- Image du projet ici -->
-                            <div class="h-full w-full flex items-center justify-center text-gray-400">
-                                <i class="fas fa-image text-4xl"></i>
-                            </div>
+                            <div class="h-full w-full flex items-center justify-center text-gray-400"><i class="fas fa-network-wired text-4xl"></i></div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2">Sécurisation d'un réseau local</h3>
-                            <p class="text-gray-700 mb-4">Mise en place d'un pare-feu et configuration de VLANs pour sécuriser un réseau d'entreprise.</p>
+                            <h3 class="font-bold text-xl mb-2" data-fr="Sécurisation d'un réseau local" data-en="Local Network Security">Sécurisation d'un réseau local</h3>
+                            <p class="text-gray-700 mb-4" data-fr="Mise en place d'un pare-feu et configuration de VLANs pour sécuriser un réseau d'entreprise." data-en="Implementation of a firewall and VLAN configuration to secure a corporate network.">Mise en place d'un pare-feu et configuration de VLANs pour sécuriser un réseau d'entreprise.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-blue-600 font-medium">Projet annuel</span>
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <span class="text-sm text-blue-600 font-medium" data-fr="Projet annuel" data-en="Yearly Project">Projet annuel</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Projet annuel 2 -->
                     <div class="project-card bg-white">
                         <div class="h-48 overflow-hidden bg-gray-200">
-                            <!-- Image du projet ici -->
-                            <div class="h-full w-full flex items-center justify-center text-gray-400">
-                                <i class="fas fa-image text-4xl"></i>
-                            </div>
+                            <div class="h-full w-full flex items-center justify-center text-gray-400"><i class="fas fa-cloud text-4xl"></i></div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2">Déploiement d'une infrastructure cloud</h3>
-                            <p class="text-gray-700 mb-4">Mise en place d'un cloud privé pour une PME avec des services de stockage et d'applications.</p>
+                            <h3 class="font-bold text-xl mb-2" data-fr="Déploiement d'une infrastructure cloud" data-en="Cloud Infrastructure Deployment">Déploiement d'une infrastructure cloud</h3>
+                            <p class="text-gray-700 mb-4" data-fr="Mise en place d'un cloud privé pour une PME avec des services de stockage et d'applications." data-en="Implementation of a private cloud for an SME with storage and application services.">Mise en place d'un cloud privé pour une PME avec des services de stockage et d'applications.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-blue-600 font-medium">Projet annuel</span>
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <span class="text-sm text-blue-600 font-medium" data-fr="Projet annuel" data-en="Yearly Project">Projet annuel</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -772,42 +731,29 @@
             <!-- Projets perso -->
             <div class="project-tab-content" id="perso-content">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Projet perso 1 -->
                     <div class="project-card bg-white">
                         <div class="h-48 overflow-hidden bg-gray-200">
-                            <!-- Image du projet ici -->
-                            <div class="h-full w-full flex items-center justify-center text-gray-400">
-                                <i class="fas fa-image text-4xl"></i>
-                            </div>
+                             <div class="h-full w-full flex items-center justify-center text-gray-400"><i class="fab fa-python text-4xl"></i></div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2">Automatisation avec Python</h3>
-                            <p class="text-gray-700 mb-4">Développement de scripts pour automatiser des tâches d'administration système.</p>
+                            <h3 class="font-bold text-xl mb-2" data-fr="Automatisation avec Python" data-en="Automation with Python">Automatisation avec Python</h3>
+                            <p class="text-gray-700 mb-4" data-fr="Développement de scripts pour automatiser des tâches d'administration système." data-en="Development of scripts to automate system administration tasks.">Développement de scripts pour automatiser des tâches d'administration système.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-blue-600 font-medium">Projet personnel</span>
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <span class="text-sm text-blue-600 font-medium" data-fr="Projet personnel" data-en="Personal Project">Projet personnel</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Projet perso 2 -->
                     <div class="project-card bg-white">
                         <div class="h-48 overflow-hidden bg-gray-200">
-                            <!-- Image du projet ici -->
-                            <div class="h-full w-full flex items-center justify-center text-gray-400">
-                                <i class="fas fa-image text-4xl"></i>
-                            </div>
+                            <div class="h-full w-full flex items-center justify-center text-gray-400"><i class="fas fa-chart-line text-4xl"></i></div>
                         </div>
                         <div class="p-6">
-                            <h3 class="font-bold text-xl mb-2">Monitoring avec Grafana</h3>
-                            <p class="text-gray-700 mb-4">Création d'un tableau de bord pour surveiller les performances du réseau et des serveurs.</p>
+                            <h3 class="font-bold text-xl mb-2" data-fr="Monitoring avec Grafana" data-en="Monitoring with Grafana">Monitoring avec Grafana</h3>
+                            <p class="text-gray-700 mb-4" data-fr="Création d'un tableau de bord pour surveiller les performances du réseau et des serveurs." data-en="Creation of a dashboard to monitor network and server performance.">Création d'un tableau de bord pour surveiller les performances du réseau et des serveurs.</p>
                             <div class="flex justify-between items-center">
-                                <span class="text-sm text-blue-600 font-medium">Projet personnel</span>
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fas fa-arrow-right"></i>
-                                </a>
+                                <span class="text-sm text-blue-600 font-medium" data-fr="Projet personnel" data-en="Personal Project">Projet personnel</span>
+                                <a href="#" class="text-blue-600 hover:text-blue-800"><i class="fas fa-arrow-right"></i></a>
                             </div>
                         </div>
                     </div>
@@ -819,22 +765,21 @@
     <!-- Stages Section -->
     <section id="stages" class="section bg-gray-100">
         <div class="container mx-auto px-4">
-            <h2 class="section-title text-3xl font-bold">Mes stages</h2>
+            <h2 class="section-title text-3xl font-bold" data-fr="Mes stages" data-en="My Internships">Mes stages</h2>
             <div class="fade-in-section">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <!-- Stage 1 -->
                     <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-xl font-bold mb-4">Stage de première année</h3>
+                        <h3 class="text-xl font-bold mb-4" data-fr="Stage de première année" data-en="First-Year Internship">Stage de première année</h3>
                         <div class="mb-4 flex items-center text-gray-600">
                             <i class="fas fa-building mr-2"></i>
                             <span>TD Synnex</span>
                         </div>
                         <div class="mb-4 flex items-center text-gray-600">
                             <i class="fas fa-calendar-alt mr-2"></i>
-                            <span>02/06 jusqu'au 04/07</span>
+                            <span data-fr="02/06 jusqu'au 04/07" data-en="06/02 to 07/04">02/06 jusqu'au 04/07</span>
                         </div>
-                        <p class="text-gray-700 mb-6">
-                            <!-- Description des missions du stage ici -->
+                        <p class="text-gray-700 mb-6" data-fr="Installation de systèmes d'exploitations (Windows, Linux..). Intégration de composants dans des PC, serveurs. Descente Master et / ou Autopilot (White Gloves)" data-en="Operating system installation (Windows, Linux, etc.). Component integration in PCs and servers. Master image deployment and/or Autopilot (White Gloves).">
                             Installation de systèmes d'exploitations (Windows, Linux..)
                             Intégration de composants dans des PC, serveurs
                             Descente Master et / ou Autopilot (White Gloves)
@@ -842,35 +787,33 @@
                         <div class="flex space-x-3">
                             <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300">
                                 <i class="fas fa-file-pdf mr-2"></i>
-                                Rapport de stage
+                                <span data-fr="Rapport de stage" data-en="Internship Report">Rapport de stage</span>
                             </a>
                             <a href="#" class="px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition duration-300">
                                 <i class="fas fa-image mr-2"></i>
-                                Galerie
+                                <span data-fr="Galerie" data-en="Gallery">Galerie</span>
                             </a>
                         </div>
                     </div>
                     
                     <!-- Stage 2 -->
                     <div class="bg-white rounded-lg shadow-md p-6">
-                        <h3 class="text-xl font-bold mb-4">Stage de deuxième année</h3>
+                        <h3 class="text-xl font-bold mb-4" data-fr="Stage de deuxième année" data-en="Second-Year Internship">Stage de deuxième année</h3>
                         <div class="mb-4 flex items-center text-gray-600">
                             <i class="fas fa-building mr-2"></i>
-                            <span><!-- Nom de l'entreprise ici --></span>
+                            <span data-fr="<!-- Nom de l'entreprise ici -->" data-en="<!-- Company Name Here -->"><!-- Nom de l'entreprise ici --></span>
                         </div>
                         <div class="mb-4 flex items-center text-gray-600">
                             <i class="fas fa-calendar-alt mr-2"></i>
-                            <span><!-- Période du stage ici --></span>
+                            <span data-fr="<!-- Période du stage ici -->" data-en="<!-- Internship Period Here -->"><!-- Période du stage ici --></span>
                         </div>
-                        <p class="text-gray-700 mb-6">
-                            <!-- Description des missions du stage ici -->
+                        <p class="text-gray-700 mb-6" data-fr="Stage à venir - Cette section sera mise à jour prochainement." data-en="Upcoming internship - This section will be updated soon.">
                             Stage à venir - Cette section sera mise à jour prochainement.
-                        
                         </p>
                         <div class="flex space-x-3">
                             <a href="#" class="px-4 py-2 bg-gray-300 text-gray-600 rounded-lg cursor-not-allowed">
                                 <i class="fas fa-file-pdf mr-2"></i>
-                                Rapport à venir
+                                <span data-fr="Rapport à venir" data-en="Report to come">Rapport à venir</span>
                             </a>
                         </div>
                     </div>
@@ -882,12 +825,12 @@
     <!-- Contact Section -->
     <section id="contact" class="section bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="section-title text-3xl font-bold">Me contacter</h2>
+            <h2 class="section-title text-3xl font-bold" data-fr="Me contacter" data-en="Contact Me">Me contacter</h2>
             <div class="fade-in-section">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
                     <div>
-                        <h3 class="text-2xl font-semibold mb-6">Restons en contact</h3>
-                        <p class="text-gray-700 mb-8">
+                        <h3 class="text-2xl font-semibold mb-6" data-fr="Restons en contact" data-en="Let's Keep in Touch">Restons en contact</h3>
+                        <p class="text-gray-700 mb-8" data-fr="Vous avez une question ? N'hésitez pas à me contacter via ce formulaire ou directement par e-mail." data-en="Have a question? Feel free to contact me using this form or directly by email.">
                             Vous avez une question ?
                             N'hésitez pas à me contacter via ce formulaire ou directement par e-mail.
                         </p>
@@ -896,7 +839,7 @@
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
-                                <h4 class="font-medium">Email</h4>
+                                <h4 class="font-medium" data-fr="Email" data-en="Email">Email</h4>
                                 <p class="text-gray-600">ilyasseddiki014@gmail.com</p>
                             </div>
                         </div>
@@ -905,18 +848,18 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
-                                <h4 class="font-medium">Localisation</h4>
+                                <h4 class="font-medium" data-fr="Localisation" data-en="Location">Localisation</h4>
                                 <p class="text-gray-600">Livry-Gargan</p>
                             </div>
                         </div>
                         <div class="flex space-x-4 mt-8">
-                            <a href="https://www.linkedin.com/in/seddiki-ilyas/" target="_blank" class="social-link bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center" title="LinkedIn">
+                            <a href="https://www.linkedin.com/in/seddiki-ilyas/" target="_blank" class="social-link bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center" title="LinkedIn" data-fr-title="LinkedIn" data-en-title="LinkedIn">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
-                            <a href="https://github.com/IlyasSeddiki" target="_blank" class="social-link bg-gray-800 hover:bg-gray-900 text-white rounded-full w-12 h-12 flex items-center justify-center" title="GitHub">
+                            <a href="https://github.com/IlyasSeddiki" target="_blank" class="social-link bg-gray-800 hover:bg-gray-900 text-white rounded-full w-12 h-12 flex items-center justify-center" title="GitHub" data-fr-title="GitHub" data-en-title="GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="https://x.com/vaanitas7" target="_blank" class="social-link bg-blue-400 hover:bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center" title="Twitter">
+                            <a href="https://x.com/vaanitas7" target="_blank" class="social-link bg-blue-400 hover:bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center" title="Twitter" data-fr-title="Twitter" data-en-title="Twitter">
                                 <i class="fab fa-twitter"></i>
                             </a>
                         </div>
@@ -924,23 +867,23 @@
                     <div>
                         <form action="https://formspree.io/f/xnndybov" method="POST" class="bg-white rounded-lg shadow-md p-8">
                             <div class="mb-6">
-                                <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Nom</label>
-                                <input type="text" id="name" name="name" class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none" placeholder="Votre nom" required>
+                                <label for="name" class="block mb-2 text-sm font-medium text-gray-700" data-fr="Nom" data-en="Name">Nom</label>
+                                <input type="text" id="name" name="name" class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none" placeholder="Votre nom" required data-fr-placeholder="Votre nom" data-en-placeholder="Your name">
                             </div>
                             <div class="mb-6">
-                                <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Email</label>
-                                <input type="email" id="email" name="email" class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none" placeholder="Votre email" required>
+                                <label for="email" class="block mb-2 text-sm font-medium text-gray-700" data-fr="Email" data-en="Email">Email</label>
+                                <input type="email" id="email" name="email" class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none" placeholder="Votre email" required data-fr-placeholder="Votre email" data-en-placeholder="Your email">
                             </div>
                             <div class="mb-6">
-                                <label for="subject" class="block mb-2 text-sm font-medium text-gray-700">Sujet</label>
-                                <input type="text" id="subject" name="subject" class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none" placeholder="Sujet du message" required>
+                                <label for="subject" class="block mb-2 text-sm font-medium text-gray-700" data-fr="Sujet" data-en="Subject">Sujet</label>
+                                <input type="text" id="subject" name="subject" class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none" placeholder="Sujet du message" required data-fr-placeholder="Sujet du message" data-en-placeholder="Message subject">
                             </div>
                             <div class="mb-6">
-                                <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Message</label>
-                                <textarea id="message" name="message" rows="5" class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none resize-none" placeholder="Votre message" required></textarea>
+                                <label for="message" class="block mb-2 text-sm font-medium text-gray-700" data-fr="Message" data-en="Message">Message</label>
+                                <textarea id="message" name="message" rows="5" class="form-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none resize-none" placeholder="Votre message" required data-fr-placeholder="Votre message" data-en-placeholder="Your message"></textarea>
                             </div>
                             <div>
-                                <button type="submit" class="btn-primary w-full text-white font-medium rounded-lg text-sm px-5 py-3 text-center">
+                                <button type="submit" class="btn-primary w-full text-white font-medium rounded-lg text-sm px-5 py-3 text-center" data-fr="Envoyer le message" data-en="Send Message">
                                     Envoyer le message
                                 </button>
                             </div>
@@ -956,20 +899,23 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
                 <div class="mb-6 md:mb-0">
-                    <h2 class="text-2xl font-bold">Portfolio BTS SIO</h2>
+                    <h2 class="text-2xl font-bold">
+                        <span data-fr="Portfolio" data-en="Portfolio">Portfolio</span>
+                        <span data-fr="BTS SIO" data-en="IT Degree">BTS SIO</span>
+                    </h2>
                     <p class="text-gray-400 mt-2"></p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="https://www.linkedin.com/in/seddiki-ilyas/" target="_blank" class="hover:text-blue-400 transition duration-300">
+                    <a href="https://www.linkedin.com/in/seddiki-ilyas/" target="_blank" class="hover:text-blue-400 transition duration-300" title="LinkedIn" data-fr-title="LinkedIn" data-en-title="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com/IlyasSeddiki" target="_blank" class="hover:text-blue-400 transition duration-300">
+                    <a href="https://github.com/IlyasSeddiki" target="_blank" class="hover:text-blue-400 transition duration-300" title="GitHub" data-fr-title="GitHub" data-en-title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="x.com/vaanitas7" target="_blank" class="hover:text-blue-400 transition duration-300">
+                    <a href="https://x.com/vaanitas7" target="_blank" class="hover:text-blue-400 transition duration-300" title="Twitter" data-fr-title="Twitter" data-en-title="Twitter">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="mailto:ilyasseddiki014@gmail.com" class="hover:text-blue-400 transition duration-300">
+                    <a href="mailto:ilyasseddiki014@gmail.com" class="hover:text-blue-400 transition duration-300" title="Email" data-fr-title="Email" data-en-title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                 </div>
@@ -996,7 +942,6 @@
             mobileMenu.classList.remove('active');
         });
         
-        // Fermer le menu mobile lorsqu'on clique sur un lien
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
@@ -1007,26 +952,63 @@
         // Gestion de la navbar sticky
         const header = document.querySelector('header');
         const nav = header.querySelector('nav');
-        const navLogo = nav.querySelector('h1');
+        const navLogoH1 = nav.querySelector('h1'); // Cible le H1 pour le texte du logo
+        const navLogoSpans = navLogoH1.querySelectorAll('span'); // Cible les spans dans le H1
         const navItems = nav.querySelectorAll('.nav-item');
-        
+        const langSwitcherDesktop = document.getElementById('lang-switcher');
+        const langSwitcherMobileIcon = document.getElementById('lang-switcher-mobile-icon');
+
+
         window.addEventListener('scroll', () => {
             if (window.scrollY > 100) {
                 nav.classList.add('navbar-sticky');
-                navLogo.classList.remove('text-white');
-                navLogo.classList.add('text-gray-800');
+                navLogoSpans.forEach(span => { // Modifier la couleur de chaque span dans le logo
+                    if (!span.classList.contains('text-yellow-400')) { // Ne pas changer la couleur du span jaune
+                        span.classList.remove('text-white');
+                        span.classList.add('text-gray-800');
+                    }
+                });
                 navItems.forEach(item => {
                     item.classList.remove('text-white');
                     item.classList.add('text-gray-800');
+                    item.classList.remove('hover:text-yellow-400');
+                    item.classList.add('hover:text-blue-600'); // Change hover color for sticky nav
                 });
+                if(langSwitcherDesktop) {
+                    langSwitcherDesktop.classList.remove('text-white', 'border-white');
+                    langSwitcherDesktop.classList.add('text-gray-700', 'border-gray-700');
+                    langSwitcherDesktop.classList.remove('hover:text-yellow-400');
+                    langSwitcherDesktop.classList.add('hover:text-blue-600');
+                }
+                if(langSwitcherMobileIcon) {
+                    langSwitcherMobileIcon.classList.remove('text-white');
+                    langSwitcherMobileIcon.classList.add('text-gray-700');
+                }
+
             } else {
                 nav.classList.remove('navbar-sticky');
-                navLogo.classList.remove('text-gray-800');
-                navLogo.classList.add('text-white');
+                 navLogoSpans.forEach(span => {
+                    if (!span.classList.contains('text-yellow-400')) {
+                        span.classList.remove('text-gray-800');
+                        span.classList.add('text-white');
+                    }
+                });
                 navItems.forEach(item => {
                     item.classList.remove('text-gray-800');
                     item.classList.add('text-white');
+                    item.classList.remove('hover:text-blue-600');
+                    item.classList.add('hover:text-yellow-400');
                 });
+                 if(langSwitcherDesktop) {
+                    langSwitcherDesktop.classList.remove('text-gray-700', 'border-gray-700');
+                    langSwitcherDesktop.classList.add('text-white', 'border-white');
+                    langSwitcherDesktop.classList.remove('hover:text-blue-600');
+                    langSwitcherDesktop.classList.add('hover:text-yellow-400');
+                }
+                if(langSwitcherMobileIcon) {
+                    langSwitcherMobileIcon.classList.remove('text-gray-700');
+                    langSwitcherMobileIcon.classList.add('text-white');
+                }
             }
         });
         
@@ -1042,39 +1024,31 @@
         });
         
         backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
         
         // Animation au scroll
         const fadeElements = document.querySelectorAll('.fade-in-section');
-        
         const fadeInOnScroll = () => {
             fadeElements.forEach(element => {
                 const elementTop = element.getBoundingClientRect().top;
                 const windowHeight = window.innerHeight;
-                
                 if (elementTop < windowHeight - 100) {
                     element.classList.add('is-visible');
                 }
             });
         };
-        
         window.addEventListener('scroll', fadeInOnScroll);
         window.addEventListener('load', fadeInOnScroll);
         
         // Animation des barres de compétences
         const animateSkills = () => {
             const skillBars = document.querySelectorAll('.skill-progress');
-            
             skillBars.forEach(bar => {
                 const width = bar.getAttribute('data-width');
                 bar.style.width = width;
             });
         };
-        
         window.addEventListener('load', animateSkills);
         
         // Gestion des onglets de projets
@@ -1083,24 +1057,96 @@
         
         tabButtons.forEach(button => {
             button.addEventListener('click', () => {
-                // Retirer la classe active de tous les boutons
-                tabButtons.forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                
-                // Ajouter la classe active au bouton cliqué
+                tabButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
-                
-                // Afficher le contenu correspondant
                 const tabId = button.getAttribute('data-tab');
-                
-                tabContents.forEach(content => {
-                    content.classList.remove('active');
-                });
-                
+                tabContents.forEach(content => content.classList.remove('active'));
                 document.getElementById(`${tabId}-content`).classList.add('active');
             });
         });
+
+        // Language Switcher Logic
+        const desktopSwitcher = document.getElementById('lang-switcher');
+        const mobileIconSwitcher = document.getElementById('lang-switcher-mobile-icon'); // Icon button
+        const mobileMenuSwitcher = document.getElementById('mobile-lang-switcher'); // Button inside mobile menu
+        const htmlTag = document.documentElement;
+        let currentLang = 'fr'; // Default language
+
+        const translations = {
+            mobileMenuButton: {
+                fr: "Passer en Anglais",
+                en: "Switch to French"
+            },
+            desktopButton: {
+                fr: "EN", // Text on button when FR is active, to switch to EN
+                en: "FR"  // Text on button when EN is active, to switch to FR
+            },
+            mobileIconButton: {
+                fr: "EN",
+                en: "FR"
+            }
+        };
+
+        function updateTexts(lang) {
+            const elementsToTranslate = document.querySelectorAll('[data-fr], [data-en], [data-fr-placeholder], [data-en-placeholder], [data-fr-title], [data-en-title]');
+            
+            elementsToTranslate.forEach(el => {
+                const frVal = el.dataset.fr;
+                const enVal = el.dataset.en;
+                const frPlaceholder = el.dataset.frPlaceholder;
+                const enPlaceholder = el.dataset.enPlaceholder;
+                const frTitle = el.dataset.frTitle;
+                const enTitle = el.dataset.enTitle;
+
+                if (lang === 'en') {
+                    if (enVal !== undefined) el.textContent = enVal;
+                    if (enPlaceholder !== undefined) el.placeholder = enPlaceholder;
+                    if (enTitle !== undefined) el.title = enTitle;
+                } else { // lang === 'fr'
+                    if (frVal !== undefined) el.textContent = frVal;
+                    if (frPlaceholder !== undefined) el.placeholder = frPlaceholder;
+                    if (frTitle !== undefined) el.title = frTitle;
+                }
+            });
+
+            htmlTag.lang = lang;
+
+            if (desktopSwitcher) desktopSwitcher.textContent = (lang === 'fr') ? translations.desktopButton.fr : translations.desktopButton.en;
+            if (mobileIconSwitcher) mobileIconSwitcher.querySelector('span').textContent = (lang === 'fr') ? translations.mobileIconButton.fr : translations.mobileIconButton.en;
+            if (mobileMenuSwitcher) mobileMenuSwitcher.textContent = (lang === 'fr') ? translations.mobileMenuButton.fr : translations.mobileMenuButton.en;
+            
+            currentLang = lang;
+        }
+
+        function toggleLanguage() {
+            const newLang = (currentLang === 'fr') ? 'en' : 'fr';
+            updateTexts(newLang);
+        }
+
+        if (desktopSwitcher) {
+            desktopSwitcher.addEventListener('click', toggleLanguage);
+        }
+        if (mobileIconSwitcher) { // The small icon before burger
+            mobileIconSwitcher.addEventListener('click', toggleLanguage);
+        }
+        if (mobileMenuSwitcher) { // The button inside the expanded mobile menu
+            mobileMenuSwitcher.addEventListener('click', () => {
+                toggleLanguage();
+                mobileMenu.classList.remove('active'); // Close menu after language switch
+            });
+        }
+        
+        // Fermer le menu mobile lorsqu'on clique sur un lien DANS le menu mobile
+        const mobileMenuNavLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+
+        // Initialize page with default language
+        updateTexts(currentLang); // Call once on load to set initial button texts correctly
     </script>
 </body>
 </html>
